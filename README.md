@@ -1,5 +1,6 @@
-# cs-template
-C# Template
+# credfeto-extensions-linq
+
+C# LINQ Extension methods
 
 ## Changelog
 
