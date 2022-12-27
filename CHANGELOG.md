@@ -9,7 +9,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.3.15
+- FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.4.16
 ### Removed
 ### Deployment Changes
 
