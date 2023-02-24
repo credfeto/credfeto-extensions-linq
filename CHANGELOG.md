@@ -9,13 +9,16 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.6.18
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.3] - 2023-02-24
+### Changed
+- FF-1429 - Updated Credfeto.Enumeration.Source.Generation to 1.0.6.18
+
 ## [1.0.2] - 2023-02-22
 ### Changed
 - FF-1429 - Updated SonarAnalyzer.CSharp to 8.53.0.62665
