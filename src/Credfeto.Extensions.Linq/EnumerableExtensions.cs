@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Credfeto.Extensions.Linq;
 
@@ -7,24 +8,16 @@ public static class EnumerableExtensions
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : class
     {
-        foreach (TItemType? item in source)
-        {
-            if (!ReferenceEquals(objA: item, objB: null))
-            {
-                yield return item;
-            }
-        }
+        return from TItemType? item in source
+               where item is not null
+               select item;
     }
 
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : struct
     {
-        foreach (TItemType? item in source)
-        {
-            if (item.HasValue)
-            {
-                yield return item.Value;
-            }
-        }
+        return from TItemType? item in source
+               where item.HasValue
+               select item.Value;
     }
 }
