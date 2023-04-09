@@ -2,16 +2,6 @@ name: "Build: Release"
 
 on:
   push:
-    paths:
-      - 'db/**/*'
-      - 'src/**/*'
-      - '.github/actions/build/action.yml'
-      - '.github/actions/build-tools/action.yml'
-      - '.github/actions/dotnet/action.yml'
-      - '.github/actions/dotnet-publish/action.yml'
-      - '.github/actions/npm/action.yml'
-      - '.github/actions/sql/action.yml'
-      - '.github/workflows/build-and-publish-release.yml'
     branches:
       - 'release/*'
       - 'hotfix/*'
@@ -26,7 +16,7 @@ permissions:
 jobs:
   build-release:
 
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
 
     steps:
       - run: sudo chown -R "$USER:$USER" "$GITHUB_WORKSPACE"
@@ -56,4 +46,3 @@ jobs:
           OCTOPUS_DEPLOY_PACKAGE_ZIP: ${{vars.OCTOPUS_DEPLOY_PACKAGE_ZIP}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           CREATE_RELEASE: true
-
