@@ -9,14 +9,17 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated Meziantou.Analyzer to 2.0.32
-- Instead of using Object.ReferenceEquals use ``is not`` operator
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.6] - 2023-04-10
+### Changed
+- Dependencies - Updated Meziantou.Analyzer to 2.0.32
+- Instead of using Object.ReferenceEquals use ``is not`` operator
+
 ## [1.0.5] - 2023-03-26
 ### Changed
 - FF-1429 - Updated FunFair.Test.Common to 6.0.26.2754
