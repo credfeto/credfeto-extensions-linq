@@ -16,7 +16,7 @@ permissions:
 jobs:
   build-release:
 
-    runs-on: [self-hosted, linux]
+    runs-on: ubuntu-latest
 
     steps:
       - run: sudo chown -R "$USER:$USER" "$GITHUB_WORKSPACE"
