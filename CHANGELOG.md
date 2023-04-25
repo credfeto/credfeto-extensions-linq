@@ -9,16 +9,19 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.0.9.588
-- Dependencies - Updated FunFair.Test.Common to 6.0.30.633
-- Dependencies - Updated Roslynator.Analyzers to 4.3.0
-- Dependencies - Updated Meziantou.Analyzer to 2.0.37
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.8] - 2023-04-25
+### Changed
+- Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.0.9.588
+- Dependencies - Updated FunFair.Test.Common to 6.0.30.633
+- Dependencies - Updated Roslynator.Analyzers to 4.3.0
+- Dependencies - Updated Meziantou.Analyzer to 2.0.37
+
 ## [1.0.7] - 2023-04-19
 ### Changed
 - Dependencies - Updated Meziantou.Analyzer to 2.0.34
