@@ -25,7 +25,7 @@ runs:
 
     - if: ${{inputs.REPO_VISIBILITY == 'public' && env.SARIF_HASH != ''}}
       name: Violation Comments Action
-      uses: tomasbjerre/violation-comments-action@v1.0.5
+      uses: tomasbjerre/violation-comments-action@1.0.5
       with:
         parser: SARIF
         keepOldComments: true # remove the old comments, or keep them
