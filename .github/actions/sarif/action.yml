@@ -21,6 +21,7 @@ runs:
         rm -rf *.Tests.sarif
         echo "Hash: ${{ hashfiles('**/*.sarif') }}"
         echo "SARIF_HASH=${{ hashfiles('**/*.sarif') }}" >> $GITHUB_ENV
+        cat *.sarif
 
     - if: ${{inputs.REPO_VISIBILITY == 'public' && env.SARIF_HASH != ''}}
       name: "Upload SARIF file for diagnostics"
