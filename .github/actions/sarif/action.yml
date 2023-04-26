@@ -25,7 +25,7 @@ runs:
       name: Post SARIF findings in the pull request
       uses: sett-and-hive/sarif-to-comment-action@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ inputs.GITHUB_TOKEN }}
         repository: ${{ github.repository }}
         branch: ${{ github.head_ref }}
         pr-number: ${{ github.event.number }}
