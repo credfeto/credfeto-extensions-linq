@@ -32,8 +32,8 @@ runs:
         commentTemplate: '{{violation.message}}'
         maxNumberOfViolations: 999 # Will only post this many comments
         severity: INFO # INFO, WARN or ERROR
-        commentOnlyChangedContent: true # Comment only if violations in the changed part of PR
-        commentOnlyChangedFiles: true # Comment only on the files that are changed in PR
+        commentOnlyChangedContent: false # Comment only if violations in the changed part of PR
+        commentOnlyChangedFiles: false # Comment only on the files that are changed in PR
         createSingleFileComments: true # Comment several comments, for each violation
         createCommentWithAllSingleFileComments: false # Create on big comment with all violations
 
