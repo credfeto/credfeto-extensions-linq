@@ -16,7 +16,9 @@ runs:
     - name: "Sarif Files to upload"
       shell: bash
       working-directory: ${{github.workspace}}/results
-      run: ls -la
+      run: |
+        ls -la
+        echo "Hash: ${{ hashfiles('${{github.workspace}}/results/**/*') }}"
 
     - if: ${{inputs.REPO_VISIBILITY == 'public' && hashfiles('${{github.workspace}}/results/**/*') != ''}}
       name: "Upload SARIF file for diagnostics"
@@ -26,6 +28,7 @@ runs:
         sarif_file: ${{github.workspace}}/results
         category: dotnet
         token: ${{github.token}}
+        wait-for-processing: true
 
     - name: "Sarif Upload Summary"
       shell: bash
