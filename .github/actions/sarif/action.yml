@@ -25,9 +25,10 @@ runs:
     - if: ${{inputs.REPO_VISIBILITY == 'public' && env.SARIF_HASH != ''}}
       name: Violation Comments Action
       uses: tomasbjerre/violation-comments-action@1.0.5
+      working-directory: ${{github.workspace}}/results
       with:
         parser: SARIF
-        regexp: '\.sarif$'
+        regexp: '.*\.sarif$'
         keepOldComments: true # remove the old comments, or keep them
         commentTemplate: '{{violation.message}}'
         maxNumberOfViolations: 999 # Will only post this many comments
