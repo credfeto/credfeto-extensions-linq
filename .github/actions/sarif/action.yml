@@ -21,6 +21,18 @@ runs:
         echo "Hash: ${{ hashfiles('**/*.sarif') }}"
         echo "SARIF_HASH=${{ hashfiles('**/*.sarif') }}" >> $GITHUB_ENV
 
+    - if: ${{github.event_name == 'pull_request' && env.SARIF_HASH != ''}}
+      name: Post SARIF findings in the pull request
+      uses: sett-and-hive/sarif-to-comment-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        repository: ${{ github.repository }}
+        branch: ${{ github.head_ref }}
+        pr-number: ${{ github.event.number }}
+        sarif-file: results/*.sarif
+        title: Analysis issues
+        dry-run: false
+
     - if: ${{inputs.REPO_VISIBILITY == 'public' && env.SARIF_HASH != ''}}
       name: "Upload SARIF file for diagnostics"
       id: sarif
