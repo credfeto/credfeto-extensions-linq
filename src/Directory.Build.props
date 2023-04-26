@@ -2,9 +2,8 @@
 
 <Project>
     <!-- Sarif -->
-    <PropertyGroup Condition="$(EnableSarif)=='True'">
+    <PropertyGroup Condition="$(EnableSarif)=='True' And !$(MSBuildProjectName.EndsWith('.Tests')">
         <ErrorLog>$(SolutionDir)\..\results\$(MSBuildProjectName).sarif,version=2.1</ErrorLog>
-        <!-- Sarif -->
-        <ReportAnalyzer>false</ReportAnalyzer>
+        <ReportAnalyzer>true</ReportAnalyzer>
     </PropertyGroup>
 </Project>
