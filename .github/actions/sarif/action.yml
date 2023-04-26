@@ -18,6 +18,7 @@ runs:
       working-directory: ${{github.workspace}}/results
       run: |
         ls -la
+        rm -rf *.Tests.sarif
         echo "Hash: ${{ hashfiles('**/*.sarif') }}"
         echo "SARIF_HASH=${{ hashfiles('**/*.sarif') }}" >> $GITHUB_ENV
 
