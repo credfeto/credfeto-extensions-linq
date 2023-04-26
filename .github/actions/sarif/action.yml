@@ -27,7 +27,7 @@ runs:
       uses: tomasbjerre/violation-comments-action@1.0.5
       with:
         parser: SARIF
-         regexp: 'results/.*\.sarif$'
+        regexp: 'results/.*\.sarif$'
         keepOldComments: true # remove the old comments, or keep them
         commentTemplate: '{{violation.message}}'
         maxNumberOfViolations: 999 # Will only post this many comments
