@@ -27,7 +27,7 @@ runs:
       uses: tomasbjerre/violation-comments-action@1.0.5
       with:
         parser: SARIF
-        regexp: 'results/.*\.sarif$'
+        regexp: '\.sarif$'
         keepOldComments: true # remove the old comments, or keep them
         commentTemplate: '{{violation.message}}'
         maxNumberOfViolations: 999 # Will only post this many comments
@@ -35,7 +35,7 @@ runs:
         commentOnlyChangedContent: false # Comment only if violations in the changed part of PR
         commentOnlyChangedFiles: false # Comment only on the files that are changed in PR
         createSingleFileComments: true # Comment several comments, for each violation
-        createCommentWithAllSingleFileComments: false # Create on big comment with all violations
+        createCommentWithAllSingleFileComments: true # Create on big comment with all violations
 
     - if: ${{inputs.REPO_VISIBILITY == 'publicX' && env.SARIF_HASH != ''}}
       name: "Upload SARIF file for diagnostics"
