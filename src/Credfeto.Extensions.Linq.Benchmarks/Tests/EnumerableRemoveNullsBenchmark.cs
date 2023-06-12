@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
-using Credfeto.Extensions.Linq.Benchmarks.Helpers;
+using Credfeto.Extensions.Linq.Helpers;
 
 namespace Credfeto.Extensions.Linq.Benchmarks.Tests;
 

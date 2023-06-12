@@ -2,9 +2,9 @@ using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
 using System.Runtime.CompilerServices;
 
-namespace Credfeto.Extensions.Linq.Benchmarks.Helpers;
+namespace Credfeto.Extensions.Linq.Helpers;
 
-internal static class Item
+public static class Item
 {
     [Pure]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
