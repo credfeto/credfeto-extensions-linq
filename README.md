@@ -22,14 +22,43 @@ View [changelog](CHANGELOG.md)
 
 | Method                      |       Mean |    Error |   StdDev |     Median |        Min |        Max | Allocated |
 |-----------------------------|-----------:|---------:|---------:|-----------:|-----------:|-----------:|----------:|
-| RemoveNullsClassProduction  |   752.8 us | 25.83 us | 75.74 us |   781.7 us |   588.6 us |   880.8 us |    904 KB |
-| RemoveNullsClassLoop        | 1,302.9 us | 25.02 us | 27.81 us | 1,295.8 us | 1,251.7 us | 1,358.3 us | 904.04 KB |
-| RemoveNullsClassLinq        |   751.0 us | 15.01 us | 14.04 us |   748.3 us |   733.7 us |   771.9 us | 904.07 KB |
-| RemoveNullsClassLinqItem    |   743.3 us | 14.83 us | 17.08 us |   740.4 us |   713.1 us |   778.8 us | 904.16 KB |
-| RemoveNullsStructProduction |   852.8 us | 16.86 us | 18.04 us |   848.8 us |   815.3 us |   896.1 us | 452.39 KB |
-| RemoveNullsStructLoop       |   787.1 us | 22.86 us | 65.59 us |   815.4 us |   656.3 us |   862.0 us |  452.4 KB |
-| RemoveNullsStructLinq       | 1,086.2 us | 33.06 us | 97.47 us | 1,123.2 us |   912.3 us | 1,338.8 us | 452.15 KB |
-| RemoveNullsStructLinqItem   | 1,090.4 us | 27.79 us | 80.17 us | 1,123.2 us |   915.4 us | 1,183.7 us | 452.17 KB |
+| RemoveNullsClassProduction  |   570.0 us | 10.96 us | 15.01 us |   569.7 us |   541.6 us |   598.7 us |      49 B |
+| RemoveNullsClassLoop        |   860.7 us | 16.31 us | 16.01 us |   855.9 us |   846.3 us |   898.9 us |      89 B |
+| RemoveNullsClassLinq        |   525.9 us | 10.40 us | 17.66 us |   527.6 us |   490.2 us |   559.4 us |      49 B |
+| RemoveNullsClassLinqItem    |   519.3 us | 10.34 us | 15.48 us |   515.2 us |   498.6 us |   558.2 us |      49 B |
+| RemoveNullsStructProduction |   711.8 us | 11.07 us |  9.81 us |   711.3 us |   695.0 us |   732.0 us |      89 B |
+| RemoveNullsStructLoop       |   673.3 us | 12.35 us | 10.95 us |   670.2 us |   661.0 us |   697.7 us |      89 B |
+| RemoveNullsStructLinq       | 1,207.6 us | 32.86 us | 96.90 us | 1,249.2 us | 1,038.2 us | 1,432.5 us |     105 B |
+| RemoveNullsStructLinqItem   | 1,262.3 us | 15.75 us | 13.15 us | 1,260.0 us | 1,240.5 us | 1,293.7 us |     105 B |
+
+// * Warnings *
+MultimodalDistribution
+EnumerableRemoveNullsBenchmark.RemoveNullsStructLinq: Default -> It seems that the distribution can have several modes (
+mValue = 2.89)
+
+// * Hints *
+Outliers
+EnumerableRemoveNullsBenchmark.RemoveNullsClassProduction: Default -> 1 outlier was removed (636.74 us)
+EnumerableRemoveNullsBenchmark.RemoveNullsClassLoop: Default -> 1 outlier was removed (961.02 us)
+EnumerableRemoveNullsBenchmark.RemoveNullsClassLinq: Default -> 1 outlier was removed (574.63 us)
+EnumerableRemoveNullsBenchmark.RemoveNullsClassLinqItem: Default -> 2 outliers were removed (573.86 us, 695.18 us)
+EnumerableRemoveNullsBenchmark.RemoveNullsStructProduction: Default -> 1 outlier was removed (751.60 us)
+EnumerableRemoveNullsBenchmark.RemoveNullsStructLoop: Default -> 1 outlier was removed (742.21 us)
+EnumerableRemoveNullsBenchmark.RemoveNullsStructLinqItem: Default -> 2 outliers were removed (1.34 ms, 1.45 ms)
+
+// * Legends *
+Mean      : Arithmetic mean of all measurements
+Error     : Half of 99.9% confidence interval
+StdDev    : Standard deviation of all measurements
+Median    : Value separating the higher half of all measurements (50th percentile)
+Min       : Minimum
+Max       : Maximum
+Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+1 us      : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+// ***** BenchmarkRunner: End *****
 
 Notes
 

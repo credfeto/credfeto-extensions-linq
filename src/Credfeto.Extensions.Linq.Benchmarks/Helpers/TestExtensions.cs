@@ -1,0 +1,39 @@
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+
+namespace Credfeto.Extensions.Linq.Benchmarks.Helpers;
+
+internal static class TestExtensions
+{
+    [SuppressMessage(category: "ReSharper", checkId: "UnusedParameter.Local", Justification = "Deliberately blank")]
+    private static void TestActionObjectItem<T>(this T value)
+        where T : class
+    {
+        // Deliberately blank
+    }
+
+    [SuppressMessage(category: "ReSharper", checkId: "UnusedParameter.Local", Justification = "Deliberately blank")]
+    private static void TestActionStructItem<T>(this T value)
+        where T : struct
+    {
+        // Deliberately blank
+    }
+
+    public static void TestEnumerableObjectAction<T>(this IEnumerable<T> value)
+        where T : class
+    {
+        foreach (T item in value)
+        {
+            item.TestActionObjectItem();
+        }
+    }
+
+    public static void TestEnumerableStructAction<T>(this IEnumerable<T> value)
+        where T : struct
+    {
+        foreach (T item in value)
+        {
+            item.TestActionStructItem();
+        }
+    }
+}

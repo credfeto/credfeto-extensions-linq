@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using BenchmarkDotNet.Attributes;
+using Credfeto.Extensions.Linq.Benchmarks.Helpers;
 using Credfeto.Extensions.Linq.Helpers;
 
 namespace Credfeto.Extensions.Linq.Benchmarks.Tests;
@@ -48,10 +49,9 @@ public abstract class EnumerableRemoveNullsBenchmark
     [Benchmark]
     public void RemoveNullsClassProduction()
     {
-        IReadOnlyList<TestClass> result = this._objectItems.RemoveNulls()
-                                              .ToArray();
+        IEnumerable<TestClass> result = this._objectItems.RemoveNulls();
 
-        TestAction(result);
+        result.TestEnumerableObjectAction();
     }
 
     [Benchmark]
@@ -70,39 +70,37 @@ public abstract class EnumerableRemoveNullsBenchmark
             }
         }
 
-        IReadOnlyList<TestClass> result = RemoveNullsNow(this._objectItems)
-            .ToArray();
+        IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
 
-        TestAction(result);
+        result.TestEnumerableObjectAction();
     }
 
     [Benchmark]
     public void RemoveNullsClassLinq()
     {
-        IReadOnlyList<TestClass> result = (from item in this._objectItems
-                                           where item is not null
-                                           select item).ToArray();
+        IEnumerable<TestClass> result = from item in this._objectItems
+                                        where item is not null
+                                        select item;
 
-        TestAction(result);
+        result.TestEnumerableObjectAction();
     }
 
     [Benchmark]
     public void RemoveNullsClassLinqItem()
     {
-        IReadOnlyList<TestClass> result = (from item in this._objectItems
-                                           where Item.Exists(item)
-                                           select item).ToArray();
+        IEnumerable<TestClass> result = from item in this._objectItems
+                                        where Item.Exists(item)
+                                        select item;
 
-        TestAction(result);
+        result.TestEnumerableObjectAction();
     }
 
     [Benchmark]
     public void RemoveNullsStructProduction()
     {
-        IReadOnlyList<TestStruct> result = this._valueItems.RemoveNulls()
-                                               .ToArray();
+        IEnumerable<TestStruct> result = this._valueItems.RemoveNulls();
 
-        TestAction(result);
+        result.TestEnumerableStructAction();
     }
 
     [Benchmark]
@@ -121,40 +119,33 @@ public abstract class EnumerableRemoveNullsBenchmark
             }
         }
 
-        IReadOnlyList<TestStruct> result = RemoveNullsNow(this._valueItems)
-            .ToArray();
+        IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
 
-        TestAction(result);
+        result.TestEnumerableStructAction();
     }
 
     [Benchmark]
     public void RemoveNullsStructLinq()
     {
-        IReadOnlyList<TestStruct> result = (from item in this._valueItems
-                                            where item.HasValue
-                                            select item.Value).ToArray();
+        IEnumerable<TestStruct> result = from item in this._valueItems
+                                         where item.HasValue
+                                         select item.Value;
 
-        TestAction(result);
+        result.TestEnumerableStructAction();
     }
 
     [Benchmark]
     public void RemoveNullsStructLinqItem()
     {
-        IReadOnlyList<TestStruct> result = (from item in this._valueItems
-                                            where Item.Exists(item)
-                                            select item.Value).ToArray();
+        IEnumerable<TestStruct> result = from item in this._valueItems
+                                         where Item.Exists(item)
+                                         select item.Value;
 
-        TestAction(result);
-    }
-
-    [SuppressMessage(category: "ReSharper", checkId: "UnusedParameter.Local", Justification = "Deliberately blank")]
-    private static void TestAction<T>(T value)
-    {
-        // Deliberately blank
+        result.TestEnumerableStructAction();
     }
 
     [DebuggerDisplay("Value: {Value}")]
-    private sealed record class TestClass(int Value);
+    private sealed record TestClass(int Value);
 
     [DebuggerDisplay("Value: {Value}")]
     private readonly record struct TestStruct(int Value);
