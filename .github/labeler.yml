@@ -34,5 +34,7 @@
  - any: [ '.github/workflows/*.yml' ]
 "Credfeto.Extensions.Linq":
  - any: [ 'src/Credfeto.Extensions.Linq/**/*' ]
+"Benchmarks":
+ - any: [ 'src/Credfeto.Extensions.Linq.Benchmarks/**/*' ]
 "Tests":
  - any: [ 'src/Credfeto.Extensions.Linq.Tests/**/*' ]
