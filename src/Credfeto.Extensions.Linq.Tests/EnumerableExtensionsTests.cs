@@ -21,13 +21,14 @@ public sealed class EnumerableExtensionsTests : TestBase
         string[] output = input.RemoveNulls()
                                .ToArray();
 
-        Assert.Equal(new[]
-                     {
-                         "A",
-                         "B",
-                         "C"
-                     },
-                     actual: output);
+        string[] expected =
+        {
+            "A",
+            "B",
+            "C"
+        };
+
+        Assert.Equal(expected: expected, actual: output);
     }
 
     [Fact]
@@ -45,12 +46,13 @@ public sealed class EnumerableExtensionsTests : TestBase
         int[] output = input.RemoveNulls()
                             .ToArray();
 
-        Assert.Equal(new[]
-                     {
-                         1,
-                         2,
-                         3
-                     },
-                     actual: output);
+        int[] expected =
+        {
+            1,
+            2,
+            3
+        };
+
+        Assert.Equal(expected: expected, actual: output);
     }
 }
