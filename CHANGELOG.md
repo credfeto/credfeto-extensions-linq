@@ -9,7 +9,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- SDK - Updated DotNet SDK to 8.0.100-preview.5.23303.2
+- SDK - Updated DotNet SDK to 8.0.100-preview.7.23376.3
 ### Removed
 ### Deployment Changes
 
