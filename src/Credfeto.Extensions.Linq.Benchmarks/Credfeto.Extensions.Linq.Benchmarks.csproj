@@ -67,7 +67,7 @@
     <PackageReference Include="ToStringWithoutOverrideAnalyzer" Version="0.6.0" PrivateAssets="All" ExcludeAssets="runtime" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="BenchmarkDotNet" Version="0.13.6" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.8" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Credfeto.Extensions.Linq\Credfeto.Extensions.Linq.csproj" />
