@@ -15,6 +15,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.3.1
 - Dependencies - Updated Meziantou.Analyzer to 2.0.103
 - Dependencies - Updated xunit to 2.6.0
+- Dependencies - Updated BenchmarkDotNet to 0.13.10
 ### Removed
 ### Deployment Changes
 
