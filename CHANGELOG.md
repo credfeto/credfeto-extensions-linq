@@ -9,7 +9,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated xunit.runner.visualstudio to 2.5.4
 - Dependencies - Updated FunFair.Test.Common to 6.1.21.247
 - Dependencies - Updated Roslynator.Analyzers to 4.7.0
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.14.6129
@@ -18,6 +17,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Meziantou.Analyzer to 2.0.120
 - Dependencies - Updated xunit.analyzers to 1.7.0
 - Dependencies - Updated xunit to 2.6.3
+- Dependencies - Updated xunit.runner.visualstudio to 2.5.5
 ### Removed
 ### Deployment Changes
 
