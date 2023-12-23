@@ -23,6 +23,14 @@ public abstract class EnumerableRemoveNullsBenchmark
 
     protected EnumerableRemoveNullsBenchmark()
     {
+        this._objectItems = Enumerable.Range(start: 0, count: ITEMS)
+                                      .Select(selector: SelectTestClass)
+                                      .ToArray();
+
+        this._valueItems = Enumerable.Range(start: 0, count: ITEMS)
+                                     .Select(selector: SelectTestStruct)
+                                     .ToArray();
+
         static TestClass? SelectTestClass(int x)
         {
             return x % SELECTION == 0
@@ -36,14 +44,6 @@ public abstract class EnumerableRemoveNullsBenchmark
                 ? new TestStruct(x)
                 : null;
         }
-
-        this._objectItems = Enumerable.Range(start: 0, count: ITEMS)
-                                      .Select(selector: SelectTestClass)
-                                      .ToArray();
-
-        this._valueItems = Enumerable.Range(start: 0, count: ITEMS)
-                                     .Select(selector: SelectTestStruct)
-                                     .ToArray();
     }
 
     [Benchmark]
@@ -58,6 +58,10 @@ public abstract class EnumerableRemoveNullsBenchmark
     [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
     public void RemoveNullsClassLoop()
     {
+        IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
+
+        result.TestEnumerableObjectAction();
+
         static IEnumerable<T> RemoveNullsNow<T>(IEnumerable<T?> source)
             where T : class
         {
@@ -69,16 +73,16 @@ public abstract class EnumerableRemoveNullsBenchmark
                 }
             }
         }
-
-        IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
-
-        result.TestEnumerableObjectAction();
     }
 
     [Benchmark]
     [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
     public void RemoveNullsClassLoopItem()
     {
+        IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
+
+        result.TestEnumerableObjectAction();
+
         static IEnumerable<T> RemoveNullsNow<T>(IEnumerable<T?> source)
             where T : class
         {
@@ -90,10 +94,6 @@ public abstract class EnumerableRemoveNullsBenchmark
                 }
             }
         }
-
-        IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
-
-        result.TestEnumerableObjectAction();
     }
 
     [Benchmark]
@@ -128,6 +128,10 @@ public abstract class EnumerableRemoveNullsBenchmark
     [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
     public void RemoveNullsStructLoop()
     {
+        IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
+
+        result.TestEnumerableStructAction();
+
         static IEnumerable<T> RemoveNullsNow<T>(IEnumerable<T?> source)
             where T : struct
         {
@@ -139,16 +143,16 @@ public abstract class EnumerableRemoveNullsBenchmark
                 }
             }
         }
-
-        IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
-
-        result.TestEnumerableStructAction();
     }
 
     [Benchmark]
     [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
     public void RemoveNullsStructLoopItem()
     {
+        IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
+
+        result.TestEnumerableStructAction();
+
         static IEnumerable<T> RemoveNullsNow<T>(IEnumerable<T?> source)
             where T : struct
         {
@@ -160,10 +164,6 @@ public abstract class EnumerableRemoveNullsBenchmark
                 }
             }
         }
-
-        IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
-
-        result.TestEnumerableStructAction();
     }
 
     [Benchmark]
