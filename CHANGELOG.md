@@ -9,7 +9,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated BenchmarkDotNet to 0.13.11
 - Dependencies - Updated SmartAnalyzers.CSharpExtensions.Annotations to 4.2.9
 - Dependencies - Updated TeamCity.VSTest.TestAdapter to 1.0.39
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.5.0
@@ -21,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated xunit to 2.6.5
 - Dependencies - Updated FunFair.Test.Common to 6.1.31.316
 - Dependencies - Updated Meziantou.Analyzer to 2.0.134
+- Dependencies - Updated BenchmarkDotNet to 0.13.12
 ### Removed
 ### Deployment Changes
 
