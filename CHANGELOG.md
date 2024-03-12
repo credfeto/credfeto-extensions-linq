@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.17] - 2024-03-12
+### Changed
 - Dependencies - Updated NSubstitute.Analyzers.CSharp to 1.0.17
 - SDK - Updated DotNet SDK to 8.0.201
 - Dependencies - Updated Roslynator.Analyzers to 4.11.0
@@ -22,12 +30,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.10.303
 - Dependencies - Updated FunFair.Test.Common to 6.1.45.389
 - Dependencies - Updated Credfeto.Enumeration.Source.Generation to 1.1.4.303
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [1.0.16] - 2024-02-08
 ### Changed
 - Dependencies - Updated SmartAnalyzers.CSharpExtensions.Annotations to 4.2.9
