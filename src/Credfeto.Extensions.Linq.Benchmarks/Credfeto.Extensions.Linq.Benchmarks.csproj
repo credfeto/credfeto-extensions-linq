@@ -16,6 +16,8 @@
     <LangVersion>latest</LangVersion>
     <NoWarn />
     <NuGetAudit>true</NuGetAudit>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
+    <NuGetAuditMode>all</NuGetAuditMode>
     <Nullable>enable</Nullable>
     <OptimizationPreference>speed</OptimizationPreference>
     <OutputType>Exe</OutputType>
@@ -27,6 +29,7 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <UseSystemResourceKeys>true</UseSystemResourceKeys>
     <WarningsAsErrors />
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
   </PropertyGroup>
   <PropertyGroup>
     <Authors>Mark Ridgwell</Authors>
