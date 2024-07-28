@@ -1,40 +1,40 @@
+".NET update":
+ - any: [ 'src/global.json' ]
 "C#":
  - any: [ './**/*.cs', './**/*.csproj' ]
 "C# Project":
  - any: [ './**/*.csproj' ]
 "C# Solution":
  - any: [ './**/*.sln' ]
-"Powershell":
- - any: [ './**/*.ps1', './**/*.psm1' ]
-"SQL":
- - any: [ 'db/**/*', './**/*.sql' ]
-"Solidity":
- - any: [ './**/*.sol' ]
-"unit-tests":
- - any: [ 'src/*.Tests.*/**/*', 'src/*.Tests/**/*', 'src/*.Tests.Integration.*/**/*', 'src/*.Tests.Integration/**/*' ]
-".NET update":
- - any: [ 'src/global.json' ]
-"Config Change":
- - any: [ 'src/**/*.json', '!src/global.json' ]
-"Static Code Analysis Rules":
- - any: [ 'src/CodeAnalysis.ruleset' ]
-"Migration Script":
- - any: [ 'tools/MigrationScripts/**/*' ]
-"Legal Text":
- - any: [ 'tools/LegalText/**/*' ]
 "Change Log":
  - any: [ 'CHANGELOG.md' ]
+"Config Change":
+ - any: [ 'src/**/*.json', '!src/global.json' ]
+"credfeto-extensions-linq":
+ - any: [ 'src/$Credfeto.Extensions.Linq/**/*' ]
+"credfeto-extensions-linq-benchmarks":
+ - any: [ 'src/$Credfeto.Extensions.Linq.Benchmarks/**/*' ]
+"credfeto-extensions-linq-tests":
+ - any: [ 'src/$Credfeto.Extensions.Linq.Tests/**/*' ]
+"github-actions":
+ - any: [ '.github/workflows/*.yml' ]
+"Legal Text":
+ - any: [ 'tools/LegalText/**/*' ]
+"Markdown":
+ - any: [ './**/*.md' ]
+"Migration Script":
+ - any: [ 'tools/MigrationScripts/**/*' ]
+"Powershell":
+ - any: [ './**/*.ps1', './**/*.psm1' ]
 "Read Me":
  - any: [ 'README.md' ]
 "Setup":
  - any: [ 'SETUP.md' ]
-"Markdown":
- - any: [ './**/*.md' ]
-"github-actions":
- - any: [ '.github/workflows/*.yml' ]
-"Credfeto.Extensions.Linq":
- - any: [ 'src/Credfeto.Extensions.Linq/**/*' ]
-"Benchmarks":
- - any: [ 'src/Credfeto.Extensions.Linq.Benchmarks/**/*' ]
-"Tests":
- - any: [ 'src/Credfeto.Extensions.Linq.Tests/**/*' ]
+"Solidity":
+ - any: [ './**/*.sol' ]
+"SQL":
+ - any: [ './**/*.sql', 'db/**/*' ]
+"Static Code Analysis Rules":
+ - any: [ 'src/CodeAnalysis.ruleset' ]
+"unit-tests":
+ - any: [ 'src/*.Tests.*/**/*', 'src/*.Tests.Integration.*/**/*', 'src/*.Tests.Integration/**/*', 'src/*.Tests/**/*' ]
