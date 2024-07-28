@@ -9,7 +9,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated SonarAnalyzer.CSharp to 9.23.1.88495
 - SDK - Updated DotNet SDK to 8.0.204
 - Dependencies - Updated FunFair.Test.Common to 6.1.49.427
 - Dependencies - Updated CSharpIsNullAnalyzer to 0.1.593
@@ -18,6 +17,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.10.48
 - Dependencies - Updated Roslynator.Analyzers to 4.12.4
 - Dependencies - Updated SmartAnalyzers.CSharpExtensions.Annotations to 4.2.11
+- Dependencies - Updated SonarAnalyzer.CSharp to 9.30.0.95878
 ### Removed
 ### Deployment Changes
 
