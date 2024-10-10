@@ -12,6 +12,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated xunit to 2.9.2
 - Dependencies - Updated Meziantou.Analyzer to 2.0.169
 - Dependencies - Updated Roslynator.Analyzers to 4.12.7
+- SDK - Updated DotNet SDK to 8.0.403
 ### Removed
 ### Deployment Changes
 
