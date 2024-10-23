@@ -1,10 +1,22 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
+    <AssemblyTitle>LINQ extensions.</AssemblyTitle>
+    <Authors>Mark Ridgwell</Authors>
+    <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
+    <Company>Mark Ridgwell</Company>
+    <Copyright>Mark Ridgwell</Copyright>
     <DebuggerSupport>true</DebuggerSupport>
+    <Description>LINQ extensions.</Description>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
     <EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>true</EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>
+    <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnablePackageValidation>true</EnablePackageValidation>
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <EnforceExtendedAnalyzerRules>false</EnforceExtendedAnalyzerRules>
     <Features>strict;flow-analysis</Features>
     <GenerateNeutralResourcesLanguageAttribute>true</GenerateNeutralResourcesLanguageAttribute>
     <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
@@ -17,6 +29,7 @@
     <IsTrimmable>true</IsTrimmable>
     <JsonSerializerIsReflectionEnabledByDefault>false</JsonSerializerIsReflectionEnabledByDefault>
     <LangVersion>latest</LangVersion>
+    <NeutralLanguage>en-GB</NeutralLanguage>
     <NoWarn />
     <NuGetAudit>true</NuGetAudit>
     <NuGetAuditLevel>low</NuGetAuditLevel>
@@ -24,6 +37,11 @@
     <Nullable>enable</Nullable>
     <OptimizationPreference>speed</OptimizationPreference>
     <OutputType>Library</OutputType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
+    <PackageTags>LINQ Extension</PackageTags>
+    <Product>LINQ Extension methods</Product>
+    <RepositoryUrl>https://github.com/credfeto/credfeto-extensions-linq</RepositoryUrl>
     <RunAOTCompilation>false</RunAOTCompilation>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <TargetFrameworks>net6.0;net7.0;net8.0</TargetFrameworks>
@@ -33,30 +51,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <UseSystemResourceKeys>true</UseSystemResourceKeys>
     <WarningsAsErrors />
-  </PropertyGroup>
-  <PropertyGroup>
-    <AnalysisLevel>latest</AnalysisLevel>
-    <AnalysisMode>AllEnabledByDefault</AnalysisMode>
-    <CodeAnalysisRuleSet>$(SolutionDir)\CodeAnalysis.ruleset</CodeAnalysisRuleSet>
-    <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
-    <EnableNETAnalyzers>true</EnableNETAnalyzers>
-    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
-    <EnforceExtendedAnalyzerRules>false</EnforceExtendedAnalyzerRules>
-  </PropertyGroup>
-  <PropertyGroup>
-    <Authors>Mark Ridgwell</Authors>
-    <Company>Mark Ridgwell</Company>
-    <Copyright>Mark Ridgwell</Copyright>
-    <NeutralLanguage>en-GB</NeutralLanguage>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
-    <PackageTags>LINQ Extension</PackageTags>
-    <Product>LINQ Extension methods</Product>
-    <RepositoryUrl>https://github.com/credfeto/credfeto-extensions-linq</RepositoryUrl>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AssemblyTitle>LINQ extensions.</AssemblyTitle>
-    <Description>LINQ extensions.</Description>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AsyncFixer" Version="1.6.0" PrivateAssets="All" ExcludeAssets="runtime" />
