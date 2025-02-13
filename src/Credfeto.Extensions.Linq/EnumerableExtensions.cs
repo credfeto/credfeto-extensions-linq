@@ -14,14 +14,16 @@ public static class EnumerableExtensions
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : class
     {
-        return from item in source
-               where Item.Exists(item)
-               select item;
+        return from item in source where Item.Exists(item) select item;
     }
 
     [Pure]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
+    [SuppressMessage(
+        category: "SonarAnalyzer.CSharp",
+        checkId: "S3267:Loops should be simplified with LINQ",
+        Justification = "For performance reasons"
+    )]
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : struct
     {

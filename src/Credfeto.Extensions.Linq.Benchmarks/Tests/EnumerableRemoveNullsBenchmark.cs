@@ -23,26 +23,24 @@ public abstract class EnumerableRemoveNullsBenchmark
 
     protected EnumerableRemoveNullsBenchmark()
     {
-        this._objectItems = [..Enumerable.Range(start: 0, count: ITEMS)
-                                      .Select(selector: SelectTestClass)
-                                      ];
+        this._objectItems =
+        [
+            .. Enumerable.Range(start: 0, count: ITEMS).Select(selector: SelectTestClass),
+        ];
 
-        this._valueItems = [..Enumerable.Range(start: 0, count: ITEMS)
-                                     .Select(selector: SelectTestStruct)
-                                     ];
+        this._valueItems =
+        [
+            .. Enumerable.Range(start: 0, count: ITEMS).Select(selector: SelectTestStruct),
+        ];
 
         static TestClass? SelectTestClass(int x)
         {
-            return x % SELECTION == 0
-                ? new TestClass(x)
-                : null;
+            return x % SELECTION == 0 ? new TestClass(x) : null;
         }
 
         static TestStruct? SelectTestStruct(int x)
         {
-            return x % SELECTION == 0
-                ? new TestStruct(x)
-                : null;
+            return x % SELECTION == 0 ? new TestStruct(x) : null;
         }
     }
 
@@ -55,7 +53,11 @@ public abstract class EnumerableRemoveNullsBenchmark
     }
 
     [Benchmark]
-    [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
+    [SuppressMessage(
+        category: "SonarAnalyzer.CSharp",
+        checkId: "S3267:Loops should be simplified with LINQ",
+        Justification = "For performance reasons"
+    )]
     public void RemoveNullsClassLoop()
     {
         IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
@@ -76,7 +78,11 @@ public abstract class EnumerableRemoveNullsBenchmark
     }
 
     [Benchmark]
-    [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
+    [SuppressMessage(
+        category: "SonarAnalyzer.CSharp",
+        checkId: "S3267:Loops should be simplified with LINQ",
+        Justification = "For performance reasons"
+    )]
     public void RemoveNullsClassLoopItem()
     {
         IEnumerable<TestClass> result = RemoveNullsNow(this._objectItems);
@@ -99,9 +105,10 @@ public abstract class EnumerableRemoveNullsBenchmark
     [Benchmark]
     public void RemoveNullsClassLinq()
     {
-        IEnumerable<TestClass> result = from item in this._objectItems
-                                        where item is not null
-                                        select item;
+        IEnumerable<TestClass> result =
+            from item in this._objectItems
+            where item is not null
+            select item;
 
         result.TestEnumerableObjectAction();
     }
@@ -109,9 +116,10 @@ public abstract class EnumerableRemoveNullsBenchmark
     [Benchmark]
     public void RemoveNullsClassLinqItem()
     {
-        IEnumerable<TestClass> result = from item in this._objectItems
-                                        where Item.Exists(item)
-                                        select item;
+        IEnumerable<TestClass> result =
+            from item in this._objectItems
+            where Item.Exists(item)
+            select item;
 
         result.TestEnumerableObjectAction();
     }
@@ -125,7 +133,11 @@ public abstract class EnumerableRemoveNullsBenchmark
     }
 
     [Benchmark]
-    [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
+    [SuppressMessage(
+        category: "SonarAnalyzer.CSharp",
+        checkId: "S3267:Loops should be simplified with LINQ",
+        Justification = "For performance reasons"
+    )]
     public void RemoveNullsStructLoop()
     {
         IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
@@ -146,7 +158,11 @@ public abstract class EnumerableRemoveNullsBenchmark
     }
 
     [Benchmark]
-    [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
+    [SuppressMessage(
+        category: "SonarAnalyzer.CSharp",
+        checkId: "S3267:Loops should be simplified with LINQ",
+        Justification = "For performance reasons"
+    )]
     public void RemoveNullsStructLoopItem()
     {
         IEnumerable<TestStruct> result = RemoveNullsNow(this._valueItems);
@@ -169,9 +185,10 @@ public abstract class EnumerableRemoveNullsBenchmark
     [Benchmark]
     public void RemoveNullsStructLinq()
     {
-        IEnumerable<TestStruct> result = from item in this._valueItems
-                                         where item.HasValue
-                                         select item.Value;
+        IEnumerable<TestStruct> result =
+            from item in this._valueItems
+            where item.HasValue
+            select item.Value;
 
         result.TestEnumerableStructAction();
     }
@@ -179,9 +196,10 @@ public abstract class EnumerableRemoveNullsBenchmark
     [Benchmark]
     public void RemoveNullsStructLinqItem()
     {
-        IEnumerable<TestStruct> result = from item in this._valueItems
-                                         where Item.Exists(item)
-                                         select item.Value;
+        IEnumerable<TestStruct> result =
+            from item in this._valueItems
+            where Item.Exists(item)
+            select item.Value;
 
         result.TestEnumerableStructAction();
     }
