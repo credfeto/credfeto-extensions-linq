@@ -5,14 +5,22 @@ namespace Credfeto.Extensions.Linq.Benchmarks.Helpers;
 
 internal static class TestExtensions
 {
-    [SuppressMessage(category: "ReSharper", checkId: "UnusedParameter.Local", Justification = "Deliberately blank")]
+    [SuppressMessage(
+        category: "ReSharper",
+        checkId: "UnusedParameter.Local",
+        Justification = "Deliberately blank"
+    )]
     private static void TestActionObjectItem<T>(this T value)
         where T : class
     {
         // Deliberately blank
     }
 
-    [SuppressMessage(category: "ReSharper", checkId: "UnusedParameter.Local", Justification = "Deliberately blank")]
+    [SuppressMessage(
+        category: "ReSharper",
+        checkId: "UnusedParameter.Local",
+        Justification = "Deliberately blank"
+    )]
     private static void TestActionStructItem<T>(this T value)
         where T : struct
     {
