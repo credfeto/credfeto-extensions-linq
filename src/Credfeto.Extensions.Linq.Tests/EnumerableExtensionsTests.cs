@@ -18,8 +18,7 @@ public sealed class EnumerableExtensionsTests : TestBase
             "C"
         ];
 
-        string[] output = input.RemoveNulls()
-                               .ToArray();
+        string[] output = [..input.RemoveNulls()];
 
         string[] expected =
         [
@@ -43,8 +42,7 @@ public sealed class EnumerableExtensionsTests : TestBase
             3
         ];
 
-        int[] output = input.RemoveNulls()
-                            .ToArray();
+        int[] output = [..input.RemoveNulls()];
 
         int[] expected =
         [

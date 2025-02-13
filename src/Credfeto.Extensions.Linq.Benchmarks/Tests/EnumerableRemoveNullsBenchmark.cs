@@ -23,13 +23,13 @@ public abstract class EnumerableRemoveNullsBenchmark
 
     protected EnumerableRemoveNullsBenchmark()
     {
-        this._objectItems = Enumerable.Range(start: 0, count: ITEMS)
+        this._objectItems = [..Enumerable.Range(start: 0, count: ITEMS)
                                       .Select(selector: SelectTestClass)
-                                      .ToArray();
+                                      ];
 
-        this._valueItems = Enumerable.Range(start: 0, count: ITEMS)
+        this._valueItems = [..Enumerable.Range(start: 0, count: ITEMS)
                                      .Select(selector: SelectTestStruct)
-                                     .ToArray();
+                                     ];
 
         static TestClass? SelectTestClass(int x)
         {
