@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.77] - 2025-02-13
+### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.66.909
 - Dependencies - Updated FunFair.CodeAnalysis to 7.0.67.907
 - Dependencies - Updated Microsoft.Sbom.Targets to 3.1.0
@@ -20,12 +28,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.13.2
 - Dependencies - Updated Roslynator.Analyzers to 4.13.0
 - Dependencies - Updated Microsoft.NET.Test.Sdk to 17.13.0
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [1.0.76] - 2025-02-03
 ### Changed
 - Dependencies - Updated Roslynator.Analyzers to 4.12.11
