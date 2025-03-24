@@ -9,13 +9,16 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated Credfeto.Enumeration to 1.2.71.984
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.80] - 2025-03-24
+### Changed
+- Dependencies - Updated Credfeto.Enumeration to 1.2.71.984
+
 ## [1.0.79] - 2025-03-23
 ### Changed
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 17.13.61
