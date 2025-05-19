@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Linq;
 using FunFair.Test.Common;
 using Xunit;
@@ -34,7 +34,7 @@ public sealed class EnumerableExtensionsTests : TestBase
     [Fact]
     public void ForEachTest()
     {
-        int[] input = [1, 2,  3];
+        int[] input = [1, 2, 3];
 
         List<int> outputs = [];
 
