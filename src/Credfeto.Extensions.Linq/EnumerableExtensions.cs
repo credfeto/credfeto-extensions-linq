@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
@@ -33,6 +34,15 @@ public static class EnumerableExtensions
             {
                 yield return item.Value;
             }
+        }
+    }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
+    {
+        foreach(T item in enumeration)
+        {
+            action(item);
         }
     }
 }

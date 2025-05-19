@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using FunFair.Test.Common;
 using Xunit;
 
@@ -28,5 +29,19 @@ public sealed class EnumerableExtensionsTests : TestBase
         int[] expected = [1, 2, 3];
 
         Assert.Equal(expected: expected, actual: output);
+    }
+
+    [Fact]
+    public void ForEachTest()
+    {
+        int[] input = [1, 2,  3];
+
+        List<int> outputs = [];
+
+        input.ForEach(outputs.Add);
+
+        int[] expected = [1, 2, 3];
+
+        Assert.Equal(expected: expected, actual: outputs);
     }
 }
