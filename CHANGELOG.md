@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Fixed
 ### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.108.1210
+- Dependencies - Updated BenchmarkDotNet to 0.15.1
 ### Removed
 ### Deployment Changes
 
