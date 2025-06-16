@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - Dependencies - Updated Meziantou.Analyzer to 2.0.202
 - Dependencies - Updated BenchmarkDotNet to 0.15.2
+- Dependencies - Updated Credfeto.Enumeration to 1.2.114.1235
 ### Removed
 ### Deployment Changes
 
