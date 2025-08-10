@@ -12,6 +12,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.7.0
 - Dependencies - Updated FunFair.Test.Common to 6.1.283.1612
 - Dependencies - Updated FunFair.CodeAnalysis to 7.1.19.1359
+- Dependencies - Updated Credfeto.Enumeration to 1.2.126.1361
 ### Removed
 ### Deployment Changes
 
