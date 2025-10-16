@@ -45,4 +45,19 @@ public static class EnumerableExtensions
             action(item);
         }
     }
+
+    [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static TValue? FirstOrNull<TValue>(this IEnumerable<TValue> list, Func<TValue, bool> predicate)
+            where TValue : struct
+        {
+            foreach (TValue item in list)
+            {
+                if (predicate(item))
+                {
+                    return item;
+                }
+            }
+
+            return null;
+        }
 }
