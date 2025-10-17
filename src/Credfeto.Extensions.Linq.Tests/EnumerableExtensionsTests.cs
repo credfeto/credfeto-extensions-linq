@@ -52,7 +52,6 @@ public sealed class EnumerableExtensionsTests : TestBase
         int? found = items.FirstOrNull(x => x == 3);
         Assert.NotNull(found);
         Assert.Equal(3, found.Value);
-
     }
 
     [Fact]
