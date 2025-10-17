@@ -40,6 +40,17 @@ public static class EnumerableExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
     {
+        if (enumeration is List<T> list)
+        {
+            list.ForEach(action);
+            return;
+        }
+
+        ForEachEnumerable(enumeration: enumeration, action: action);
+    }
+
+    private static void ForEachEnumerable<T>(IEnumerable<T> enumeration, Action<T> action)
+    {
         foreach (T item in enumeration)
         {
             action(item);

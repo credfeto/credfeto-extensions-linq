@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using FunFair.Test.Common;
 using Xunit;
 
@@ -43,5 +42,25 @@ public sealed class EnumerableExtensionsTests : TestBase
         int[] expected = [1, 2, 3];
 
         Assert.Equal(expected: expected, actual: outputs);
+    }
+
+    [Fact]
+    public void FirstOrNullMatch()
+    {
+        int[] items = [1, 2, 3, 4];
+
+        int? found = items.FirstOrNull(x => x == 3);
+        Assert.NotNull(found);
+        Assert.Equal(3, found.Value);
+
+    }
+
+    [Fact]
+    public void FirstOrNullNoMatch()
+    {
+        int[] items = [1, 2, 3, 4];
+
+        int? found = items.FirstOrNull(x => x == 7);
+        Assert.Null(found);
     }
 }
