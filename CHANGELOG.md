@@ -11,6 +11,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - Dotnet 10
 - Dependencies - Updated Credfeto.Enumeration to 1.2.129.1430
+- Dependencies - Updated FunFair.CodeAnalysis to 7.1.25.1550
 ### Removed
 ### Deployment Changes
 
