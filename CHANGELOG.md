@@ -10,6 +10,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Fixed
 ### Changed
 - Dotnet 10
+- Dependencies - Updated Credfeto.Enumeration to 1.2.129.1430
 ### Removed
 ### Deployment Changes
 
