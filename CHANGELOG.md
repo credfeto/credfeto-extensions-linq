@@ -17,6 +17,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.9.1
 - Dependencies - Updated Roslynator.Analyzers to 4.14.1
 - Dependencies - Updated xunit.analyzers to 1.24.0
+- Dependencies - Updated xunit.v3 to 3.1.0
 ### Removed
 ### Deployment Changes
 
