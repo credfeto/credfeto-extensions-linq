@@ -9,6 +9,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Removed
+### Deployment Changes
+
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.138] - 2025-10-25
+### Changed
 - Dotnet 10
 - Dependencies - Updated Credfeto.Enumeration to 1.2.129.1430
 - Dependencies - Updated FunFair.CodeAnalysis to 7.1.25.1550
@@ -20,12 +28,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated xunit.v3 to 3.1.0
 - Dependencies - Updated BenchmarkDotNet to 0.15.4
 - Dependencies - Updated FunFair.Test.Common to 6.2.2.1777
-### Removed
-### Deployment Changes
 
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
 ## [1.0.137] - 2025-09-11
 ### Changed
 - SDK - Updated DotNet SDK to 9.0.305
