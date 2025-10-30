@@ -5,14 +5,12 @@ namespace Credfeto.Extensions.Linq.Benchmarks.Helpers;
 
 internal static class TestExtensions
 {
-    
     private static void TestActionObjectItem<T>(this T value)
         where T : class
     {
         // Deliberately blank
     }
 
-    
     private static void TestActionStructItem<T>(this T value)
         where T : struct
     {
