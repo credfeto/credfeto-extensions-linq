@@ -1,17 +1,16 @@
 using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 
-namespace Credfeto.Extensions.Linq.Benchmarks.Helpers;
+namespace Credfeto.Extensions.Linq.Benchmarks.Tests.Helpers;
 
 internal static class TestExtensions
 {
-    private static void TestActionObjectItem<T>(this T value)
+    private static void TestActionObjectItem<T>(this T _)
         where T : class
     {
         // Deliberately blank
     }
 
-    private static void TestActionStructItem<T>(this T value)
+    private static void TestActionStructItem<T>(this T _)
         where T : struct
     {
         // Deliberately blank

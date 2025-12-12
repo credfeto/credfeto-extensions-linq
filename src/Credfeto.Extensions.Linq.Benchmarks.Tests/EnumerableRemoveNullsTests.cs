@@ -1,15 +1,17 @@
-﻿using System.Diagnostics;
-using BenchmarkDotNet.Loggers;
+﻿using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Reports;
-using BenchmarkDotNet.Running;
-using Credfeto.Extensions.Linq.Benchmarks.Tests;
+using Credfeto.Extensions.Linq.Benchmarks.Tests.Bench;
+using FunFair.Test.Common;
+using Xunit;
 
-namespace Credfeto.Extensions.Linq.Benchmarks;
+namespace Credfeto.Extensions.Linq.Benchmarks.Tests;
 
 public sealed class EnumerableRemoveNullsTests : LoggingTestBase
 {
-    public ItemRemoveNullsTests(ITestOutputHelper output)
-        : base(output) { }
+    public EnumerableRemoveNullsTests(ITestOutputHelper output)
+        : base(output)
+    {
+    }
 
     [Fact]
     public void Run_Benchmarks()
