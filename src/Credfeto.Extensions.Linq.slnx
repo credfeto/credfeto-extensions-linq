@@ -5,7 +5,7 @@
     <File Path="CodeAnalysis.ruleset" />
     <File Path="global.json" />
   </Folder>
-  <Project Path="Credfeto.Extensions.Linq.Benchmarks/Credfeto.Extensions.Linq.Benchmarks.csproj" />
+  <Project Path="Credfeto.Extensions.Linq.Benchmarks.Tests\Credfeto.Extensions.Linq.Benchmarks.Tests.csproj" />
   <Project Path="Credfeto.Extensions.Linq.Tests/Credfeto.Extensions.Linq.Tests.csproj" />
   <Project Path="Credfeto.Extensions.Linq/Credfeto.Extensions.Linq.csproj" />
 </Solution>
