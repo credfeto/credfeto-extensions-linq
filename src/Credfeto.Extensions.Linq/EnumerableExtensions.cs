@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Diagnostics.Contracts;
@@ -16,14 +16,16 @@ public static class EnumerableExtensions
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : class
     {
-        return from item in source
-               where Item.Exists(item)
-               select item;
+        return from item in source where Item.Exists(item) select item;
     }
 
     [Pure]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
-    [SuppressMessage(category: "SonarAnalyzer.CSharp", checkId: "S3267:Loops should be simplified with LINQ", Justification = "For performance reasons")]
+    [SuppressMessage(
+        category: "SonarAnalyzer.CSharp",
+        checkId: "S3267:Loops should be simplified with LINQ",
+        Justification = "For performance reasons"
+    )]
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : struct
     {
@@ -41,10 +43,16 @@ public static class EnumerableExtensions
     {
         switch (enumeration)
         {
-            case List<T> list: list.ForEach(action); break;
-            case T[] array: ForEach(source: array, action: action); break;
+            case List<T> list:
+                list.ForEach(action);
+                break;
+            case T[] array:
+                ForEach(source: array, action: action);
+                break;
 
-            default: ForEachEnumerable(enumeration: enumeration, action: action); break;
+            default:
+                ForEachEnumerable(enumeration: enumeration, action: action);
+                break;
         }
     }
 
