@@ -1,4 +1,4 @@
-﻿using BenchmarkDotNet.Loggers;
+using BenchmarkDotNet.Loggers;
 using BenchmarkDotNet.Reports;
 using Credfeto.Extensions.Linq.Benchmarks.Tests.Bench;
 using FunFair.Test.Common;
@@ -9,9 +9,7 @@ namespace Credfeto.Extensions.Linq.Benchmarks.Tests;
 public sealed class EnumerableRemoveNullsTests : LoggingTestBase
 {
     public EnumerableRemoveNullsTests(ITestOutputHelper output)
-        : base(output)
-    {
-    }
+        : base(output) { }
 
     [Fact]
     public void Run_Benchmarks()
