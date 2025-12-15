@@ -12,8 +12,8 @@
  - any: [ 'src/**/*.json', '!src/global.json' ]
 "credfeto-extensions-linq":
  - any: [ 'src/$Credfeto.Extensions.Linq/**/*' ]
-"credfeto-extensions-linq-benchmarks":
- - any: [ 'src/$Credfeto.Extensions.Linq.Benchmarks/**/*' ]
+"credfeto-extensions-linq-benchmarks-tests":
+ - any: [ 'src/$Credfeto.Extensions.Linq.Benchmarks.Tests/**/*' ]
 "credfeto-extensions-linq-tests":
  - any: [ 'src/$Credfeto.Extensions.Linq.Tests/**/*' ]
 "github-actions":
