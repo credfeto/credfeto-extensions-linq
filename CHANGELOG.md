@@ -13,6 +13,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Meziantou.Analyzer to 3.0.15
 - Dependencies - Updated FunFair.Test.Common to 6.2.17.1982
 - Dependencies - Updated FunFair.Test.Source.Generator to 6.2.17.1982
+- SDK - Updated DotNet SDK to 10.0.200
 ### Removed
 ### Deployment Changes
 
