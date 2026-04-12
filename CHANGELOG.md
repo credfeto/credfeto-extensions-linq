@@ -13,6 +13,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.CodeAnalysis to 7.1.36.1750
 - Dependencies - Updated Meziantou.Analyzer to 3.0.46
 - Dependencies - Updated Philips.CodeAnalysis.DuplicateCodeAnalyzer to 1.11.1
+- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.11.0
 ### Removed
 ### Deployment Changes
 
