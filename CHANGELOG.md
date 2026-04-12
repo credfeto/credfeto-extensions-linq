@@ -9,18 +9,21 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- Dependencies - Updated Credfeto.Enumeration to 1.2.140.1751
-- Dependencies - Updated FunFair.CodeAnalysis to 7.1.36.1750
-- Dependencies - Updated Meziantou.Analyzer to 3.0.46
-- Dependencies - Updated Philips.CodeAnalysis.DuplicateCodeAnalyzer to 1.11.1
-- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.11.0
-- Dependencies - Updated SonarAnalyzer.CSharp to 10.23.0.137933
 ### Removed
 ### Deployment Changes
 
 <!--
 Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
 -->
+## [1.0.147] - 2026-04-12
+### Changed
+- Dependencies - Updated Credfeto.Enumeration to 1.2.140.1751
+- Dependencies - Updated FunFair.CodeAnalysis to 7.1.36.1750
+- Dependencies - Updated Meziantou.Analyzer to 3.0.46
+- Dependencies - Updated Philips.CodeAnalysis.DuplicateCodeAnalyzer to 1.11.1
+- Dependencies - Updated Philips.CodeAnalysis.MaintainabilityAnalyzers to 1.11.0
+- Dependencies - Updated SonarAnalyzer.CSharp to 10.23.0.137933
+
 ## [1.0.146] - 2026-03-19
 ### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.138.1737
