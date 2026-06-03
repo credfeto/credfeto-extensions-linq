@@ -41,18 +41,17 @@ public static class EnumerableExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
     {
-        switch (enumeration)
+        if (enumeration is List<T> list)
         {
-            case List<T> list:
-                list.ForEach(action);
-                break;
-            case T[] array:
-                ForEach(source: array, action: action);
-                break;
-
-            default:
-                ForEachEnumerable(enumeration: enumeration, action: action);
-                break;
+            list.ForEach(action);
+        }
+        else if (enumeration is T[] array)
+        {
+            ForEach(source: array, action: action);
+        }
+        else
+        {
+            ForEachEnumerable(enumeration: enumeration, action: action);
         }
     }
 
