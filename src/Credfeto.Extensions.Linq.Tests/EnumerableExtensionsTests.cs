@@ -48,7 +48,8 @@ public sealed class EnumerableExtensionsTests : TestBase
     [Fact]
     public void ForEachListBranchTest()
     {
-        List<int> input = [1, 2, 3];
+        List<int> list = [1, 2, 3];
+        IEnumerable<int> input = list;
 
         List<int> outputs = [];
 
