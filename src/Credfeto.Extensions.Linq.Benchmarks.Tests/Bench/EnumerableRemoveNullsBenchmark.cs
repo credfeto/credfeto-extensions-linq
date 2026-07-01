@@ -14,14 +14,14 @@ namespace Credfeto.Extensions.Linq.Benchmarks.Tests.Bench;
 [MeanColumn]
 [MedianColumn]
 [MemoryDiagnoser(false)]
-public abstract class EnumerableRemoveNullsBenchmark
+public class EnumerableRemoveNullsBenchmark
 {
     private const int ITEMS = 100000;
     private const int SELECTION = 2;
     private readonly IReadOnlyList<TestClass?> _objectItems;
     private readonly IReadOnlyList<TestStruct?> _valueItems;
 
-    protected EnumerableRemoveNullsBenchmark()
+    public EnumerableRemoveNullsBenchmark()
     {
         this._objectItems = [.. Enumerable.Range(start: 0, count: ITEMS).Select(selector: SelectTestClass)];
 
