@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using FunFair.Test.Common;
@@ -64,6 +65,32 @@ public sealed class EnumerableExtensionsTests : TestBase
     public void ForEachEnumerableBranchTest()
     {
         IEnumerable<int> input = Enumerable.Range(start: 1, count: 3);
+
+        List<int> outputs = [];
+
+        input.ForEach(outputs.Add);
+
+        int[] expected = [1, 2, 3];
+
+        Assert.Equal(expected: expected, actual: outputs);
+    }
+
+    [Fact]
+    public void ForEachSpanEmptyTest()
+    {
+        ReadOnlySpan<int> input = [];
+
+        List<int> outputs = [];
+
+        input.ForEach(outputs.Add);
+
+        Assert.Empty(outputs);
+    }
+
+    [Fact]
+    public void ForEachSpanTest()
+    {
+        ReadOnlySpan<int> input = [1, 2, 3];
 
         List<int> outputs = [];
 
