@@ -57,7 +57,7 @@ public static class EnumerableExtensions
 
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     [OverloadResolutionPriority(1)]
-    public static void ForEach<T>(in ReadOnlySpan<T> source, Action<T> action)
+    public static void ForEach<T>(this in ReadOnlySpan<T> source, Action<T> action)
     {
         ref T searchSpace = ref MemoryMarshal.GetReference(source);
 
