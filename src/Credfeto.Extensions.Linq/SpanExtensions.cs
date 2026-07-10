@@ -9,6 +9,8 @@ public static class SpanExtensions
     public static T Aggregate<T>(this in ReadOnlySpan<T> states, T seed, Func<T, T, T> func)
         where T : notnull
     {
+        ArgumentNullException.ThrowIfNull(func);
+
         T max = seed;
 
         foreach (T next in states)
