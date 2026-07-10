@@ -11,9 +11,9 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Fixed
 - ForEach ReadOnlySpan overload is now callable as an extension method
 ### Changed
-- Dependencies - Updated Meziantou.Analyzer to 3.0.121
 - Dependencies - Updated SonarAnalyzer.CSharp to 10.28.0.143324
 - Dependencies - Updated FunFair.CodeAnalysis to 7.2.7.2152
+- Dependencies - Updated Meziantou.Analyzer to 3.0.122
 ### Deprecated
 ### Removed
 ### Deployment Changes
