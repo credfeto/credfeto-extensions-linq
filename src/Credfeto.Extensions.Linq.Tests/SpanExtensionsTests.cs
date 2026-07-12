@@ -25,4 +25,14 @@ public sealed class SpanExtensionsTests : TestBase
 
         Assert.Equal(expected: 10, actual: output);
     }
+
+    [Fact]
+    public void AggregateShouldThrowWhenFuncIsNull()
+    {
+        ArgumentNullException exception = Assert.Throws<ArgumentNullException>(() =>
+            ((ReadOnlySpan<int>)[1, 2, 3]).Aggregate(seed: 0, func: null!)
+        );
+
+        Assert.Equal(expected: "func", actual: exception.ParamName);
+    }
 }

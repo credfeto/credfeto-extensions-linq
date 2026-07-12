@@ -16,17 +16,30 @@ public static class EnumerableExtensions
     public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
         where TItemType : class
     {
-        return from item in source where Item.Exists(item) select item;
+        ArgumentNullException.ThrowIfNull(source);
+
+        return from item in source
+            where Item.Exists(item)
+            select item;
     }
 
     [Pure]
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
+    public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
+        where TItemType : struct
+    {
+        ArgumentNullException.ThrowIfNull(source);
+
+        return RemoveNullsIterator(source);
+    }
+
+    [Pure]
     [SuppressMessage(
         category: "SonarAnalyzer.CSharp",
         checkId: "S3267:Loops should be simplified with LINQ",
         Justification = "For performance reasons"
     )]
-    public static IEnumerable<TItemType> RemoveNulls<TItemType>(this IEnumerable<TItemType?> source)
+    private static IEnumerable<TItemType> RemoveNullsIterator<TItemType>(IEnumerable<TItemType?> source)
         where TItemType : struct
     {
         foreach (TItemType? item in source)
@@ -41,6 +54,9 @@ public static class EnumerableExtensions
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public static void ForEach<T>(this IEnumerable<T> enumeration, Action<T> action)
     {
+        ArgumentNullException.ThrowIfNull(enumeration);
+        ArgumentNullException.ThrowIfNull(action);
+
         if (enumeration is List<T> list)
         {
             list.ForEach(action);
@@ -59,6 +75,8 @@ public static class EnumerableExtensions
     [OverloadResolutionPriority(1)]
     public static void ForEach<T>(this in ReadOnlySpan<T> source, Action<T> action)
     {
+        ArgumentNullException.ThrowIfNull(action);
+
         ref T searchSpace = ref MemoryMarshal.GetReference(source);
 
         for (int index = 0; index < source.Length; ++index)
@@ -80,6 +98,9 @@ public static class EnumerableExtensions
     public static TValue? FirstOrNull<TValue>(this IEnumerable<TValue> list, Func<TValue, bool> predicate)
         where TValue : struct
     {
+        ArgumentNullException.ThrowIfNull(list);
+        ArgumentNullException.ThrowIfNull(predicate);
+
         foreach (TValue item in list)
         {
             if (predicate(item))
