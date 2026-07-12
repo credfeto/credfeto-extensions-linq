@@ -1,6 +1,6 @@
 # credfeto-extensions-linq
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 C# LINQ Extension methods
@@ -31,12 +31,12 @@ View [changelog](CHANGELOG.md)
 | RemoveNullsStructLinq       | 1,207.6 us | 32.86 us | 96.90 us | 1,249.2 us | 1,038.2 us | 1,432.5 us |     105 B |
 | RemoveNullsStructLinqItem   | 1,262.3 us | 15.75 us | 13.15 us | 1,260.0 us | 1,240.5 us | 1,293.7 us |     105 B |
 
-// * Warnings *
+// *Warnings*
 MultimodalDistribution
 EnumerableRemoveNullsBenchmark.RemoveNullsStructLinq: Default -> It seems that the distribution can have several modes (
 mValue = 2.89)
 
-// * Hints *
+// *Hints*
 Outliers
 EnumerableRemoveNullsBenchmark.RemoveNullsClassProduction: Default -> 1 outlier was removed (636.74 us)
 EnumerableRemoveNullsBenchmark.RemoveNullsClassLoop: Default -> 1 outlier was removed (961.02 us)
@@ -46,7 +46,7 @@ EnumerableRemoveNullsBenchmark.RemoveNullsStructProduction: Default -> 1 outlier
 EnumerableRemoveNullsBenchmark.RemoveNullsStructLoop: Default -> 1 outlier was removed (742.21 us)
 EnumerableRemoveNullsBenchmark.RemoveNullsStructLinqItem: Default -> 2 outliers were removed (1.34 ms, 1.45 ms)
 
-// * Legends *
+// *Legends*
 Mean      : Arithmetic mean of all measurements
 Error     : Half of 99.9% confidence interval
 StdDev    : Standard deviation of all measurements
@@ -56,7 +56,7 @@ Max       : Maximum
 Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
 1 us      : 1 Microsecond (0.000001 sec)
 
-// * Diagnostic Output - MemoryDiagnoser *
+// *Diagnostic Output - MemoryDiagnoser*
 
 // ***** BenchmarkRunner: End *****
 
