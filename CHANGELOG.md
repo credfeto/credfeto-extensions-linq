@@ -9,6 +9,15 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Security
 ### Added
 ### Fixed
+### Changed
+### Deprecated
+### Removed
+### Deployment Changes
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.158] - 2026-07-15
+### Fixed
 - ForEach ReadOnlySpan overload is now callable as an extension method
 - Public extension methods now throw ArgumentNullException with the correct parameter name instead of a NullReferenceException when called with null arguments
 ### Changed
@@ -18,12 +27,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Test.Source.Generator to 6.3.4.2441
 - Dependencies - Updated SonarAnalyzer.CSharp to 10.29.0.143774
 - SDK - Updated DotNet SDK to 10.0.302
-### Deprecated
-### Removed
-### Deployment Changes
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
+
 ## [1.0.157] - 2026-07-05
 ### Changed
 - Dependencies - Updated Meziantou.Analyzer to 3.0.114
