@@ -13,6 +13,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Deprecated
+### Removed
+### Deployment Changes
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.160] - 2026-08-22
+### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.151.2192
 - Dependencies - Updated FunFair.CodeAnalysis to 7.2.13.2323
 - Dependencies - Updated Meziantou.Analyzer to 3.0.167
@@ -23,12 +31,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Test.Source.Generator to 6.3.9.2602
 - Dependencies - Updated NSubstitute to 6.2.0
 - Dependencies - Updated FunFair.Test to 6.3.9.2602
-### Deprecated
-### Removed
-### Deployment Changes
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
+
 ## [1.0.159] - 2026-08-20
 ### Changed
 - Drop net9.0 support - target net10.0 only
