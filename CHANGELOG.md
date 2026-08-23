@@ -20,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated SonarAnalyzer.CSharp to 10.33.0.1635
 - Dependencies - Updated FunFair.Test.Source.Generator to 6.4.0.2617
 - Dependencies - Updated FunFair.Test to 6.4.0.2617
+- Switched test projects from xunit.v3.mtp-v2 to xunit.v3.aot.mtp-v2 to match FunFair.Test.Common's AOT xunit dependency chain, resolving a duplicate-type build failure
 ### Deprecated
 ### Removed
 ### Deployment Changes
