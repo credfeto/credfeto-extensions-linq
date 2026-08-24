@@ -13,6 +13,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Deprecated
+### Removed
+### Deployment Changes
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.161] - 2026-08-24
+### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.152.2216
 - Dependencies - Updated CSharpIsNullAnalyzer to 0.2.19
 - Dependencies - Updated Meziantou.Analyzer to 3.0.177
@@ -21,12 +29,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Test.Source.Generator to 6.4.0.2617
 - Dependencies - Updated FunFair.Test to 6.4.0.2617
 - Switched test projects from xunit.v3.mtp-v2 to xunit.v3.aot.mtp-v2 to match FunFair.Test.Common's AOT xunit dependency chain, resolving a duplicate-type build failure
-### Deprecated
-### Removed
-### Deployment Changes
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
+
 ## [1.0.160] - 2026-08-22
 ### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.151.2192
