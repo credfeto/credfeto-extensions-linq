@@ -13,6 +13,14 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
+### Deprecated
+### Removed
+### Deployment Changes
+<!--
+Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
+-->
+## [1.0.163] - 2026-09-13
+### Changed
 - Dependencies - Updated Credfeto.Enumeration to 1.2.154.2267
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.16.6891
 - Dependencies - Updated SonarAnalyzer.CSharp to 10.34.0.3385
@@ -21,12 +29,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Meziantou.Analyzer to 3.0.257
 - Dependencies - Updated xunit.analyzers to 2.1.0
 - Dependencies - Updated xunit.v3 to 4.0.1
-### Deprecated
-### Removed
-### Deployment Changes
-<!--
-Releases that have at least been deployed to staging, BUT NOT necessarily released to live.  Changes should be moved from [Unreleased] into here as they are merged into the appropriate release branch
--->
+
 ## [1.0.162] - 2026-09-09
 ### Changed
 - SDK - Updated DotNet SDK to 10.0.401
