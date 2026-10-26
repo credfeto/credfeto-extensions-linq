@@ -5,7 +5,6 @@
     <CodeAnalysisTreatWarningsAsErrors>true</CodeAnalysisTreatWarningsAsErrors>
     <DebuggerSupport>true</DebuggerSupport>
     <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
-    <EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>true</EnableMicrosoftExtensionsConfigurationBinderSourceGenerator>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
     <EnablePackageValidation>true</EnablePackageValidation>
     <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
@@ -49,12 +48,12 @@
   </ItemGroup>
   <Import Project="$(SolutionDir)UnitTests.props" Condition="Exists('$(SolutionDir)UnitTests.props')" />
   <ItemGroup>
-    <ProjectReference Include="..\Credfeto.Extensions.Linq\Credfeto.Extensions.Linq.csproj" />
+    <ProjectReference Include="../Credfeto.Extensions.Linq/Credfeto.Extensions.Linq.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="FunFair.Test.Common" Version="6.4.6.2749" />
-    <PackageReference Include="NSubstitute" Version="6.2.0" />
-    <PackageReference Include="xunit.v3.aot.mtp-v2" Version="4.0.1" />
+    <PackageReference Include="FunFair.Test.Common" Version="6.4.6.2749" IncludeAssets="compile;runtime" />
+    <PackageReference Include="NSubstitute" Version="6.2.0" IncludeAssets="compile;runtime" />
+    <PackageReference Include="xunit.v3.aot.mtp-v2" Version="4.0.1" IncludeAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="AsyncFixer" Version="2.1.0" PrivateAssets="All" ExcludeAssets="runtime" />
