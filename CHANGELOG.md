@@ -13,7 +13,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Added
 ### Fixed
 ### Changed
-- SDK - Updated DotNet SDK to 10.0.402
+- SDK - Updated DotNet SDK to 10.0.403
 ### Deprecated
 ### Removed
 ### Deployment Changes
