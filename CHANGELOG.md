@@ -20,6 +20,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 18.12.1
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.19.0
 - Dependencies - Updated Roslynator.Analyzers to 5.0.1
+- Dependencies - Updated SonarAnalyzer.CSharp to 10.35.0.4138
 ### Deprecated
 ### Removed
 ### Deployment Changes
