@@ -19,6 +19,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated Microsoft.Sbom.Targets to 4.1.13
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 18.12.1
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.19.0
+- Dependencies - Updated Roslynator.Analyzers to 5.0.1
 ### Deprecated
 ### Removed
 ### Deployment Changes
