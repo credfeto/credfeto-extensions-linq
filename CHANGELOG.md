@@ -15,7 +15,6 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 ### Changed
 - SDK - Updated DotNet SDK to 10.0.403
 - Dependencies - Updated FunFair.CodeAnalysis to 7.2.20.2501
-- Dependencies - Updated Meziantou.Analyzer to 3.0.317
 - Dependencies - Updated Microsoft.Sbom.Targets to 4.1.13
 - Dependencies - Updated Microsoft.VisualStudio.Threading.Analyzers to 18.12.1
 - Dependencies - Updated Nullable.Extended.Analyzer to 1.19.0
@@ -26,6 +25,7 @@ Please ADD ALL Changes to the UNRELEASED SECTION and not a specific release
 - Dependencies - Updated FunFair.Test to 6.4.7.2960
 - Dependencies - Updated FunFair.Test.Source.Generator to 6.4.7.2960
 - Dependencies - Updated Credfeto.Enumeration to 1.2.156.2472
+- Dependencies - Updated Meziantou.Analyzer to 3.0.318
 ### Deprecated
 ### Removed
 ### Deployment Changes
