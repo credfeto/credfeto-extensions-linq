@@ -8,7 +8,7 @@ using Credfeto.Extensions.Linq.Helpers;
 
 namespace Credfeto.Extensions.Linq.Benchmarks.Tests.Bench;
 
-[DryJob]
+[Config(typeof(InProcessDryConfig))]
 [MinColumn]
 [MaxColumn]
 [MeanColumn]
